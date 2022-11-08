@@ -13,6 +13,9 @@ body{
 	padding: 0;
 	font-family: arial;
 }
+#tlo{
+	backround: url(./backround.jfif)
+}
 
 ul{
 	margin: 0;
