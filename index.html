@@ -1,10 +1,242 @@
-<html>
+<<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
     <head>
-    <style>
-<h1> Testing
-    </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="http://www.375196.mine.game/css/strony_www/style.css" />
+        <title>Strona serwera</title>
+        <script src="http://www.375196.mine.game/js/jquery-1.10.2.min.js"></script>
+        
+                    
+            
+                <link rel="icon" type="image/png" href="https://www.enderchest.pl/css/i/enderchest.png" />
+
+            
+                
+        
+        
     </head>
-    <body>
+<body>
     
+    
+            
+                
+        <div id="komunikat_wys" class="" style="display:none;">
+            <div class="obszar">
+                <div class="okno">
+                    <div class="tytul"></div>
+                    <div class="tresc"></div>
+                    <div class="przyciski">
+                        <a href="javascript:wylacz_komunikat()" class="b_zielony_url_max zamknij">Zamknij</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+        <script>
+        
+            function wlacz_komunikat(typ, tytul, tresc, tekst_przycisku){
+                
+
+                var wysokosc_doc = $( document ).height();
+                var wysokosc_okna = $( window ).height();
+
+
+                $("#komunikat_wys").css('display', 'table');
+                $("#komunikat_wys").addClass(typ);
+                $("#komunikat_wys .obszar .okno .tytul").html(tytul);
+                $("#komunikat_wys .obszar .okno .tresc").html(tresc);
+                $("#komunikat_wys .obszar .okno .przyciski a.zamknij").html(tekst_przycisku);
+
+                $("#komunikat_wys").css("height", wysokosc_okna+"px");
+                    
+                                
+            }
+            
+            function wylacz_komunikat(){
+                             
+                $("#komunikat_wys").animate({opacity:0}, 200);
+                setTimeout(function(){
+                    $("#komunikat_wys").remove();
+                },205);
+                
+                history.pushState(null, null, location.href.replace(/&?komunikat=([^&]$|[^&]*)/i, ""));
+                
+            }
+        
+        </script>
+    
+        
+	<div id="tlo_gora_tlo">
+		<div class="wysrodkowanie" id="gora">
+            
+                        
+                            
+                    <div id="lewo" class="logo wlasne" style="background-image:url('https://www.enderchest.pl/loga/375196.png');"></div>
+
+                            
+                        
+			<div id="prawo">
+				<div class="ip">
+                    
+                                        
+                        IP: lifesteal.mine.game
+                    
+                                        
+				</div>
+				<div id="status">
+                    					Status: <div class="online">online<i></i></div> Ver.                     
+                    				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu_tlo">
+		<div class="wysrodkowanie" id="menu">
+			<div id="steve"></div>
+			<ul>
+                				<li class="aktywny"><a href="http://www.375196.mine.game/">Aktualności</a></li>
+                                
+				<li class=""><a href="http://www.375196.mine.game/shop/">Sklep</a></li>
+                
+                                
+                                                
+			</ul>
+		</div>
+	</div>
+	<div id="tlo">
+        
+        <!--<a id="reklama_hap" href="https://www.hostandplay.pl" target="_blank" title="Hosting serwerów gier"></a>-->
+        
+    <ul class="wysrodkowanie" id="okruchy">
+        <li class="ikona okruchy"></li>
+        
+                <li><a href="http://www.375196.mine.game/">Strona główna</a></li>
+                
+            </ul>
+        
+        <div class="wysrodkowanie" id="obszar">
+            <div id="lewa"><div id="tytul">
+					<i style="background:url(http://www.375196.mine.game/css/strony_www/i/ksiazka.png) no-repeat;width:36px;height:27px;left:15px;top:12px;"></i>Aktualności				</div>
+				<div id="tresc">
+
+                    
+                                        
+                                            
+                            <div class="wiadomosc">
+                                <div class="ikona_tytul_dodano">
+                                    <div class="wiersz">
+                                        <div class="komorka ikona">
+                                            <img src="https://www.enderchest.pl/ikony/aktualnosci/2.png">
+                                        </div>
+                                        <a class="komorka nazwa_wiadomosci" href="http://www.375196.mine.game/news/39987/">
+                                            End fight                                            <div class="data_wiadomosci">Dodano: 2022-11-08 10:47:09</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="tresc_wiadomosci">End fight questions...</div>                            </div>
+                    
+                                            
+                            <div class="wiadomosc">
+                                <div class="ikona_tytul_dodano">
+                                    <div class="wiersz">
+                                        <div class="komorka ikona">
+                                            <img src="https://www.enderchest.pl/ikony/aktualnosci/1.png">
+                                        </div>
+                                        <a class="komorka nazwa_wiadomosci" href="http://www.375196.mine.game/news/39986/">
+                                            Mojang servers down                                            <div class="data_wiadomosci">Dodano: 2022-11-08 08:25:33</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="tresc_wiadomosci">Welp mojang servers are down...</div>                            </div>
+                    
+                                            
+                                        
+                    
+
+					<ul id="strony">
+                        					</ul>
+                </div>
+            </div>
+            <div id="prawa">
+
+				<div class="box standardowy ekipa_serwera">
+				
+					<div class="tytul">Ekipa serwera</div>
+					<div class="tresc">
+                                                
+                            <div class="lista_osob">
+                                
+                                                                
+                                                                
+                                    <div class="grupa">
+                                        <div class="styl">Owner</div>
+                                    </div>
+                                
+                                                                        <div class="osoba">
+                                        <div class="obrazek">
+                                            <div class="obrazek_premium" style="background-image:url('https://minotar.net/avatar/Team16x/100');"></div>
+                                        </div>
+                                        <div class="nick">Team16x</div>
+                                        <div class="kontakt_i_status">
+                                                                                                                                    <a href="mailto:smiley.buisness@mail.com" class="email"> </a>                                                                                            <div class="status offline">offline</div>
+                                                                                    </div>
+                                    </div>
+                                                                    
+                                                            </div>
+                        
+                        					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+<div id="wymuszenie_wysokosci"></div>
+<script>
+$(function(){
+	wymuszenie_wysokosci();
+});
+function wymuszenie_wysokosci(){
+	
+	var page_wysokosc_tresci = $("body").outerHeight(); //520
+	var page_wysokosc_strony = $(window).outerHeight(); //706
+	var dodawanie_wysokosci = page_wysokosc_strony - page_wysokosc_tresci;	
+	var odejmowanie_wysokosci = page_wysokosc_tresci - page_wysokosc_strony;	
+	
+	if(dodawanie_wysokosci > 0){
+		
+		var wysokosc_wymuszenia = $("#wymuszenie_wysokosci").height();
+		
+
+		wysokosc_wymuszenia += dodawanie_wysokosci;
+		$("#wymuszenie_wysokosci").css("height", wysokosc_wymuszenia+"px");
+		
+	}
+
+}
+</script>
+		</div>
+	</div>
+	<div id="stopka_tlo">
+		<div id="stopka" class="wysrodkowanie">
+			<div id="host">
+				Ten serwer jest hostowany przez <font color="00a8a3">enderchest.pl</font>			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+            <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55124971-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     </body>
-    </html>
+</html>
